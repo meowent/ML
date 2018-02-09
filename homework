@@ -1,0 +1,60 @@
+code
+========================
+
+import random
+import numpy 
+print ("\n\nHomework 1 : generate 5 random variables\n\n")
+print ([random.random() for i in range(5)])
+
+
+print ("\n\nHomework 2 : generate 10^N randome variables with average and stander diviation\n\n")  
+def f(n):
+    if n<1:            
+        return random.random()*2-1    
+    else:
+        return [f(n-1) for i in range(10)]
+          
+for N in range(6):
+    print ("\nFor 10^",N,"random variables")
+    print ("Mean :",numpy.mean(f(N)))
+    print ("Stander diviation :",numpy.std(f(N)))
+
+=========================
+
+result
+=========================
+
+Homework 1 : generate 5 random variables
+
+
+[0.10226822979276784, 0.4877932492692849, 0.5242308331042699, 0.7147604332033933, 0.40138434161371306]
+
+
+Homework 2 : generate 10^N randome variables with average and stander diviation
+
+
+
+For 10^ 0 random variables
+Mean : 0.65246600359
+Stander diviation : 0.0
+
+For 10^ 1 random variables
+Mean : 0.139534830498
+Stander diviation : 0.544993627739
+
+For 10^ 2 random variables
+Mean : 0.108669719166
+Stander diviation : 0.576554155386
+
+For 10^ 3 random variables
+Mean : 0.00172594105724
+Stander diviation : 0.585513920692
+
+For 10^ 4 random variables
+Mean : 0.00848513892132
+Stander diviation : 0.582937504156
+
+For 10^ 5 random variables
+Mean : 0.000831571542209
+Stander diviation : 0.576217987292
+=========================
